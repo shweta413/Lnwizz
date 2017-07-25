@@ -9,7 +9,8 @@
 // Declare app level module which depends on views, and components
 angular.module('mainApp', [
     'ngRoute',
-    'mainApp.login'
+    'mainApp.view1',
+    'mainApp.view2'
 ])
 
 
@@ -21,7 +22,7 @@ angular.module('mainApp', [
 
 angular.module('mainApp').controller('indexController', ['$scope', '$location', function ($scope, $location) {
 
-    $scope.getClass = function (path) {
+   /* $scope.getClass = function (path) {
         return ($location.path().substr(0, path.length) === path) ? 'active' : '';
     };
     $scope.Current = new Date();
@@ -33,7 +34,7 @@ angular.module('mainApp').controller('indexController', ['$scope', '$location', 
         localStorage.removeItem('username');
         localStorage.removeItem('authToken');
         $location.path("/");
-    }
+    } */
 
 
 }]);
